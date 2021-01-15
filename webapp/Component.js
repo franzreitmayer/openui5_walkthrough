@@ -6,12 +6,7 @@ sap.ui.define([
     "use strict";
     return UIComponent.extend("eu.reitmayer.openui5.walkthrough.Component", {
         metadata: {
-            "rootView": {
-                "viewName": "eu.reitmayer.openui5.walkthrough.view.App",
-                "type": "XML",
-                "async": true,
-                "id": "app"
-            }
+            manifest: "json"
         },
         init: function () {
             // call the init function of the parent
