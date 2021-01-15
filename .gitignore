@@ -1,0 +1,5 @@
+# Dependency directories
+node_modules/
+
+# ui5 distribution
+dist/

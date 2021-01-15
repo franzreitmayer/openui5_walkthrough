@@ -1,0 +1,19 @@
+{
+  "name": "openui5_walkthrough",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franzreitmayer/openui5_walkthrough.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/franzreitmayer/openui5_walkthrough/issues"
+  },
+  "homepage": "https://github.com/franzreitmayer/openui5_walkthrough#readme"
+}

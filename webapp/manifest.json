@@ -1,0 +1,9 @@
+{
+    "sap.app": {
+        "id": "openui5_walkthrough",
+        "type": "application",
+        "title": "Open UI5 Walkthough",
+        "applicationVersion": { "version": "1.0.0" }
+
+    }
+}

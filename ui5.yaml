@@ -1,0 +1,10 @@
+specVersion: '2.2'
+metadata:
+  name: openui5_walkthrough
+type: application
+framework:
+  name: OpenUI5
+  version: "1.85.2"
+  libraries:
+    - name: sap.m
+    - name: sap.ui.core
