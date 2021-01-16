@@ -11,11 +11,11 @@
         },
         "dataSources": {
             "invoiceRemote": {
-              "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/",
-              "type": "OData",
-              "settings": {
-                "odataVersion": "2.0"
-              }
+                "uri": "https://services.odata.org/V2/Northwind/Northwind.svc/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
             }
         }
     },
@@ -52,7 +52,40 @@
                 }
             },
             "invoice": {
-                "dataSource": "invoiceRemote"
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "Invoices.json"
+            }
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "eu.reitmayer.openui5.walkthrough.view",
+                "controlId": "app",
+                "controlAggregation": "pages",
+                "async": true
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "overview",
+                    "target": "overview"
+                },
+                {
+                    "pattern": "detail",
+                    "name": "detail",
+                    "target": "detail"
+                }
+            ],
+            "targets": {
+                "overview": {
+                    "viewId": "overview",
+                    "viewName": "Overview"
+                },
+                "detail": {
+                    "viewId": "detail",
+                    "viewName": "Detail"
+                }
             }
         },
         "resources": {

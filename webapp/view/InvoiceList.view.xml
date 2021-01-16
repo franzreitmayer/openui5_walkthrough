@@ -14,13 +14,13 @@
 				group : true
 			}
       }" >
-      <headerToolbar>
-         <Toolbar>
-            <Title text="{i18n>invoiceListTitle}"/>
-            <ToolbarSpacer/>
-            <SearchField width="50%" search=".onFilterInvoices"/>
-         </Toolbar>
-      </headerToolbar>
+        <headerToolbar>
+            <Toolbar>
+                <Title text="{i18n>invoiceListTitle}"/>
+                <ToolbarSpacer/>
+                <SearchField width="50%" search=".onFilterInvoices"/>
+            </Toolbar>
+        </headerToolbar>
         <items>
             <ObjectListItem
                 title="{invoice>Quantity} x {invoice>ProductName}"
@@ -32,7 +32,9 @@
 			                }
 		                }"
 		        numberUnit="{view>/currency}"
-                numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }">
+                numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }"
+                type="Navigation"
+					press="onPress">
                 <firstStatus>
                     <ObjectStatus text="{
 						    path: 'invoice>Status',
