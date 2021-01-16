@@ -14,6 +14,7 @@
 					</headerContent>
                     <content>
                         <mvc:XMLView viewName="eu.reitmayer.openui5.walkthrough.view.HelloPanel"/>
+                        <mvc:XMLView viewName="eu.reitmayer.openui5.walkthrough.view.InvoiceList"/>
                     </content>
                 </Page>
             </pages>
