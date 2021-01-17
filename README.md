@@ -24,7 +24,7 @@ Step 02 (step_002) was produced from Step 01 with the following modifications:
 }`
 3. initialize ui5 tooling with `npm init`
 4. Set the framework to use with `ui5 use openui5@latest`
-5. Add the required libraries with `ui5 add sap.ui.core sap.m`
+5. Add the required libraries with `ui5 add sap.ui.core sap.m themelib_sap_belize`
 6. The tooling then takes care of the dependencies and offers the libraries at the resource path _./resources/..._ e.g. _/resources/sap-ui-core.js_. You need to care about correct paths at bootstripping ui5
 
 As you've applied also the advanced index.html and the first implementation of of index.js from Step 02 of the openui5 walkthrough you can `ui5 serv -o index.html` to start a local server to test your application.
