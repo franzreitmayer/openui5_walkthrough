@@ -4,6 +4,9 @@ sap.ui.define([
 ], function (Controller, MessageToast) {
     "use strict";
     return Controller.extend("eu.reitmayer.openui5.walkthrough.controller.App", {
+        onInit: function () {
+			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
+		},
         onOpenDialog : function () {
 			this.getOwnerComponent().openHelloDialog();
 		}

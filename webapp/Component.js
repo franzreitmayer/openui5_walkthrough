@@ -3,7 +3,7 @@ sap.ui.define([
     "sap/ui/model/json/JSONModel",
     "sap/ui/model/resource/ResourceModel",
     "./controller/HelloDialog",
-	"sap/ui/Device"
+    "sap/ui/Device"
 ], function (UIComponent, JSONModel, ResourceModel, HelloDialog, Device) {
     "use strict";
     return UIComponent.extend("eu.reitmayer.openui5.walkthrough.Component", {
@@ -23,10 +23,10 @@ sap.ui.define([
             this.setModel(oModel);
 
             // set device model
-			var oDeviceModel = new JSONModel(Device);
-			oDeviceModel.setDefaultBindingMode("OneWay");
+            var oDeviceModel = new JSONModel(Device);
+            oDeviceModel.setDefaultBindingMode("OneWay");
             this.setModel(oDeviceModel, "device");
-            
+
             // set i18n model
             var i18nModel = new ResourceModel({
                 bundleName: "eu.reitmayer.openui5.walkthrough.i18n.i18n",
@@ -38,7 +38,18 @@ sap.ui.define([
             this._helloDialog = new HelloDialog(this.getRootControl());
 
             // create the views based on the url/hash
-			this.getRouter().initialize();
+            this.getRouter().initialize();
+        },
+
+        getContentDensityClass: function () {
+            if (!this._sContentDensityClass) {
+                if (!Device.support.touch) {
+                    this._sContentDensityClass = "sapUiSizeCompact";
+                } else {
+                    this._sContentDensityClass = "sapUiSizeCozy";
+                }
+            }
+            return this._sContentDensityClass;
         },
 
 
